@@ -1,0 +1,6 @@
+nnsight
+plotly
+memory_profiler
+pandas
+psutil 
+torch 

@@ -26,3 +26,6 @@ Hardware:
 - [ ] rtx8000
 - [ ] titanx
 - [ ] cpu only
+
+
+This repo will also help me understand the inner workings of the methods and how various researchers are optimizing their experiments. I plan to put out all my findings in this repo. Hopefully it benefits someone else too! 

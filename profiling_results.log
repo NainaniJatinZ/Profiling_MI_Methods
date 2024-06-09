@@ -1,0 +1,42 @@
+2024-06-09 16:06:55,051 - Memory used by stage1: 4.41 MB
+Peak memory usage during stage1: 7.67 MB
+2024-06-09 16:06:55,054 - Time taken by wrapper: 2.2420 seconds
+2024-06-09 16:06:57,236 - Memory used by stage2: 1.30 MB
+Peak memory usage during stage2: 1.30 MB
+2024-06-09 16:06:57,243 - Time taken by wrapper: 2.1888 seconds
+2024-06-09 16:07:02,148 - Memory used by stage3: 1.09 MB
+Peak memory usage during stage3: 1.09 MB
+2024-06-09 16:07:02,148 - Time taken by wrapper: 4.9048 seconds
+2024-06-09 16:07:02,301 - Memory used by wrapper: 6.14 MB
+Peak memory usage during wrapper: 7.14 MB
+2024-06-09 16:07:04,434 - Memory used by stage1: 2.83 MB
+Peak memory usage during stage1: 4.83 MB
+2024-06-09 16:07:04,437 - Time taken by wrapper: 2.1354 seconds
+2024-06-09 16:07:06,595 - Memory used by stage2: 0.00 MB
+Peak memory usage during stage2: 0.00 MB
+2024-06-09 16:07:06,603 - Time taken by wrapper: 2.1659 seconds
+2024-06-09 16:07:11,499 - Memory used by stage3: 0.00 MB
+Peak memory usage during stage3: 0.00 MB
+2024-06-09 16:07:11,499 - Time taken by wrapper: 4.8963 seconds
+2024-06-09 16:07:11,500 - Time taken by wrapper: 19.3772 seconds
+2024-06-09 16:14:23,949 - Memory used by stage1: 4.47 MB
+Peak memory usage during stage1: 7.73 MB
+2024-06-09 16:14:23,952 - Time taken by stage1: 2.2278 seconds
+2024-06-09 16:14:26,350 - Memory used by stage2: 1.30 MB
+Peak memory usage during stage2: 1.30 MB
+2024-06-09 16:14:26,357 - Time taken by stage2: 2.4049 seconds
+2024-06-09 16:14:31,798 - Memory used by stage3: 1.05 MB
+Peak memory usage during stage3: 1.05 MB
+2024-06-09 16:14:31,798 - Time taken by stage3: 5.4405 seconds
+2024-06-09 16:14:31,981 - Memory used by example_function: 6.89 MB
+Peak memory usage during example_function: 7.89 MB
+2024-06-09 16:14:34,374 - Memory used by stage1: 3.56 MB
+Peak memory usage during stage1: 5.56 MB
+2024-06-09 16:14:34,377 - Time taken by stage1: 2.3961 seconds
+2024-06-09 16:14:36,749 - Memory used by stage2: 0.77 MB
+Peak memory usage during stage2: 0.77 MB
+2024-06-09 16:14:36,756 - Time taken by stage2: 2.3785 seconds
+2024-06-09 16:14:41,442 - Memory used by stage3: 0.00 MB
+Peak memory usage during stage3: 0.00 MB
+2024-06-09 16:14:41,443 - Time taken by stage3: 4.6868 seconds
+2024-06-09 16:14:41,446 - Time taken by example_function: 20.3896 seconds
