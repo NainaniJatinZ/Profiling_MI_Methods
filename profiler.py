@@ -16,7 +16,13 @@ class Profiler:
             result = func(*args, **kwargs)
             end_time = timeit.default_timer()
             elapsed_time = end_time - start_time
-            log_message = f"Time taken by {func.__name__}: {elapsed_time:.4f} seconds"
+            num_tokens = kwargs.get('num_tokens', 1)
+            num_prompts = kwargs.get('num_prompts', 1)
+            total_tokens = num_tokens * num_prompts
+            log_message = (f"Number of tokens: {num_tokens}, Number of prompts: {num_prompts}\n"
+                           f"Time taken by {func.__name__}: {elapsed_time:.4f} seconds "
+                           f"({elapsed_time/total_tokens:.4f} seconds per token, "
+                           f"{elapsed_time/num_prompts:.4f} seconds per prompt)")
             logging.info(log_message)
             print(log_message)
             return result
@@ -32,13 +38,26 @@ class Profiler:
             if isinstance(mem_peak, list):
                 mem_peak = mem_peak[0]
 
-            log_message = (f"Memory used by {func.__name__}: {mem_after - mem_before:.2f} MB\n"
+            num_tokens = kwargs.get('num_tokens', 1)
+            num_prompts = kwargs.get('num_prompts', 1)
+            total_tokens = num_tokens * num_prompts
+            log_message = (f"Number of tokens: {num_tokens}, Number of prompts: {num_prompts}\n"
+                           f"Memory used by {func.__name__}: {mem_after - mem_before:.2f} MB "
+                           f"({(mem_after - mem_before)/total_tokens:.4f} MB per token, "
+                           f"{(mem_after - mem_before)/num_prompts:.4f} MB per prompt)\n"
                            f"Peak memory usage during {func.__name__}: {mem_peak - mem_before:.2f} MB")
             logging.info(log_message)
             print(log_message)
             return func(*args, **kwargs)
         return wrapper
 
+    # def log_profile(self, func):
+    #     @wraps(func)
+    #     def wrapper(*args, **kwargs):
+    #         func = self.time_profile(func)
+    #         func = self.memory_profile(func)
+    #         return func(*args, **kwargs)
+    #     return wrapper
     def log_profile(self, func):
         @self.time_profile
         @self.memory_profile
@@ -46,6 +65,7 @@ class Profiler:
         def wrapper(*args, **kwargs):
             return func(*args, **kwargs)
         return wrapper
+
 
     def profile_stages(self, stages):
         profiled_stages = []
